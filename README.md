@@ -49,8 +49,15 @@ A capture group treats everything within the parentheses as a single unit, allow
     * This group captures the path part of the URL. It matches zero or more occurrences of characters that are forward slashes (/), word characters (\w), spaces ( ), dots (.), or hyphens (-). The * quantifier allows for flexibility in matching the path.
 For instance #1, the capture group (https?:\/\/)? will include http:// or https:// in this group when searching, with the ? quantifier indicating that the s after http is optional. This ensures that both http:// and https:// protocols are captured if present in the URL.
 ### Bracket Expressions
+Bracket expressions, also known as character classes, are used in regular expressions to match a single character out of a set of characters. In the context of matching URL regex, bracket expressions are used to define specific characters or ranges of characters that can appear at certain positions in the URL.
 
-### Character Classes
+In the given URL regex expression, the following bracket expressions are used:
+
+1. [\da-z\.-]: This bracket expression matches a single character that is a digit (\d), a lowercase letter (a-z), a dot (.), or a hyphen (-). It allows for matching characters commonly found in domain names, such as alphanumeric characters, dots, and hyphens.
+
+2. [a-z\.]: This bracket expression matches a single lowercase letter (a-z) or a dot (.). It is used specifically to match characters in the top-level domain (TLD) part of the URL, ensuring that only lowercase letters and dots are accepted in this position.
+
+Bracket expressions provide a concise way to specify the characters that should be matched at a particular position in the URL, allowing for flexibility and customization in regex patterns.
 
 ### The OR Operator
 
