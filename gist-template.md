@@ -22,9 +22,17 @@ Regular expressions (regex) play a vital role in parsing and validating text pat
 ## Regex Components
 
 ### Anchors
-
+Anchors serve as markers indicating the beginning and end points for the regular expression search. The "^" symbol signifies a match at the start of a string, while the "$" symbol denotes a match at the end. When used together, they signify that the entire string must precisely match the pattern enclosed between them, creating a requirement for an exact string match. In the given expression, the combination of both "^" and "$" anchors ensures an exact match for the entire collection of meta characters, thereby constraining the search to exact matches only.
 ### Quantifiers
+-Quantifiers dictate the number of occurrences of a character, group, or character class within the expression. This character combination encompasses various quantifiers, which are elaborated upon in the table of contents for further understanding of groups, capturing, and brackets.
 
+-The * symbol matches anything preceding it zero to infinite times, depending on the occurrences in the string. Within the third capture group, "([/\w .-])*", it searches for instances of the specified criteria within the brackets and then allows for the repetition of those criteria, including the potential for zero occurrences.
+
+-The "+" symbol matches one or more occurrences, excluding zero occurrences. In the capture group "([\da-z.-]+)", the "+" symbol matches any number of instances as declared within the square brackets, ensuring at least one occurrence.
+
+-The "?" symbol matches zero or one occurrence. For instance, the first capture group "(https?://)?" accepts either zero or one instance of "s".
+
+-The "{}" quantifier specifies the number of occurrences of the preceding group or character. Within the last capture group, "([a-z.]{2,6})", the "{2,6}" expression seeks 2 to 6 instances of the character based on the criteria defined within the square brackets.
 ### Grouping Constructs
 
 ### Bracket Expressions
