@@ -76,7 +76,17 @@ In regular expressions, flags are sued to modify the behavior of the pattern mat
 
 for matching URL regex, you might use flags such as 'i' to make the matching case-insensitive, or 'g' to find all occurrances of the pattern within the input string. However, the specific flags used depend on the requirement of your matching scenario.
 ### Character Escapes
-
+Character Escapred in a URL regex allow you to match specific characters or character classes. Here are some common character escapes used in URL regex:
+1. `\.` : Matches a literal period characters (``.`).
+2. `\/`: Matches a literal forward slash character (`/`).
+3. `\w`: Matches ant word character (equivalent to `[A-Za-z0-9_]`).
+4. `\d`: Matches any digit character (equivalent to `[0-9]`).
+5. `\s`: Matches any whitespace character.
+6. `\b`: Matches a word boundary.
+7. `\W`: Matches any non-word character (equivalent to `[A-Za-z0-9_]`).
+8. `D`: Matches any non-digit character (equivalent to `[^0-9]`).
+9. `\S`: Matches any non-whitespace character
+These character escapres allow you to create more percise URL regex patterns by matching specific tpyes of charater or character classes. 
 ## Author
-
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Made with ♡ by: Daelyn Hiduchick 
+[Github Link](https://github.com/dhiduchick) 
