@@ -35,3 +35,19 @@ Anchors serve as markers indicating the beginning and end points for the regular
 -The "?" symbol matches zero or one occurrence. For instance, the first capture group "(https?://)?" accepts either zero or one instance of "s".
 
 -The "{}" quantifier specifies the number of occurrences of the preceding group or character. Within the last capture group, "([a-z.]{2,6})", the "{2,6}" expression seeks 2 to 6 instances of the character based on the criteria defined within the square brackets.
+
+### Grouping Constructs
+
+### Bracket Expressions
+
+### Character Classes
+
+### The OR Operator
+
+### Flags
+
+### Character Escapes
+
+## Author
+
+A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
