@@ -37,7 +37,17 @@ Anchors serve as markers indicating the beginning and end points for the regular
 -The "{}" quantifier specifies the number of occurrences of the preceding group or character. Within the last capture group, "([a-z.]{2,6})", the "{2,6}" expression seeks 2 to 6 instances of the character based on the criteria defined within the square brackets.
 
 ### Grouping Constructs
+A capture group treats everything within the parentheses as a single unit, allowing the regex engine to capture and remember the matched substring for later use. In the given URL regex expression, there are four instances of capture groups:
 
+1. Capture Group #1 (Protocol): (https?:\/\/)?
+    * This group captures the protocol part of the URL (e.g., http:// or https://). It matches http:// or https:// optionally (zero or one occurrence).
+2. Capture Group #2 (Domain): ([\da-z\.-]+)\.
+    * This group captures the domain name of the URL. It matches one or more characters that are digits (\d), lowercase letters (a-z), dots (.), or hyphens (-) followed by a dot (.).
+3. Capture Group #3 (TLD): ([a-z\.]{2,6})
+    * This group captures the top-level domain (TLD) part of the URL. It matches lowercase letters (a-z) or dots (.) with a length between 2 and 6 characters.
+4. Capture Group #4 (Path): ([\/\w \.-]*)*
+    * This group captures the path part of the URL. It matches zero or more occurrences of characters that are forward slashes (/), word characters (\w), spaces ( ), dots (.), or hyphens (-). The * quantifier allows for flexibility in matching the path.
+For instance #1, the capture group (https?:\/\/)? will include http:// or https:// in this group when searching, with the ? quantifier indicating that the s after http is optional. This ensures that both http:// and https:// protocols are captured if present in the URL.
 ### Bracket Expressions
 
 ### Character Classes
