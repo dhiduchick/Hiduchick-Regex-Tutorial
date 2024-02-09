@@ -8,3 +8,19 @@ Regular expressions (regex) play a vital role in parsing and validating text pat
 
 
 `/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/`
+
+## Table of Contents
+
+- [Anchors](#anchors)
+- [Quantifiers](#quantifiers)
+- [Grouping Constructs](#grouping-constructs)
+- [Bracket Expressions](#bracket-expressions)
+- [Character Classes](#character-classes)
+- [The OR Operator](#the-or-operator)
+- [Flags](#flags)
+- [Character Escapes](#character-escapes)
+
+## Regex Components
+
+### Anchors
+Anchors serve as markers indicating the beginning and end points for the regular expression search. The "^" symbol signifies a match at the start of a string, while the "$" symbol denotes a match at the end. When used together, they signify that the entire string must precisely match the pattern enclosed between them, creating a requirement for an exact string match. In the given expression, the combination of both "^" and "$" anchors ensures an exact match for the entire collection of meta characters, thereby constraining the search to exact matches only.
