@@ -66,7 +66,15 @@ For example, in the following URL regex: `^(https?:\/\/)?` The ? after (https?:\
 
 Similarly, in the following URL regex: `([a-z\.]{2,6})` The {2,6} specifies that the preceding pattern [a-z\.] should be repeated 2 to 6 times, allowing for top-level domains (TLDs) like .com, .org, .net, etc. The dot . in [a-z\.] represents the dot in the TLD, and the [a-z] matches lowercase letters. So, in this case, the OR operator is not explicitly used, but alternative patterns are achieved through the quantifier {2,6}, allowing for different TLD lengths.
 ### Flags
+In regular expressions, flags are sued to modify the behavior of the pattern matching. For matching URL regex, some commonly used flags include:
+1. i(ignore case): This flag makes the pattern matching case-insensitive, allowing it to match both uppercase and lowercase characters interchageably.
+2. g(global): This flag makes the pattern search gloab within the input string, meaning it will find all occurances of the pattern rather than just the first one.
+3. m(multiline): This flag modifies the behavior of ^ and $ to match the beginning and end of each line wihtin a miulti-line string, rather than just beginning and end of the entire string. 
+4. s(dotALL): This flas allows the dot . to match newline characters as well, whereas by default it does not match newline characters.
+5. u(unicode): This flad enables support for Unicode matching, allowing Unicode characters to be properly matched.
+6. y(sticky): This flad requires that the match must start exactly at the index specified by the 'lastIndex' property of the regular expression object.
 
+for matching URL regex, you might use flags such as 'i' to make the matching case-insensitive, or 'g' to find all occurrances of the pattern within the input string. However, the specific flags used depend on the requirement of your matching scenario.
 ### Character Escapes
 
 ## Author
