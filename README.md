@@ -60,7 +60,11 @@ In the given URL regex expression, the following bracket expressions are used:
 Bracket expressions provide a concise way to specify the characters that should be matched at a particular position in the URL, allowing for flexibility and customization in regex patterns.
 
 ### The OR Operator
+In regular expressions, the OR operator is represented by the vertical bar |. It allows you to specify multiple alternatives for matching patterns. In the context of matching URL regex, the OR operator can be used to define alternative patterns for specific parts of the URL.
 
+For example, in the following URL regex: `^(https?:\/\/)?` The ? after (https?:\/\/) indicates that the s in https is optional, allowing the URL to start with either http:// or https://.
+
+Similarly, in the following URL regex: `([a-z\.]{2,6})` The {2,6} specifies that the preceding pattern [a-z\.] should be repeated 2 to 6 times, allowing for top-level domains (TLDs) like .com, .org, .net, etc. The dot . in [a-z\.] represents the dot in the TLD, and the [a-z] matches lowercase letters. So, in this case, the OR operator is not explicitly used, but alternative patterns are achieved through the quantifier {2,6}, allowing for different TLD lengths.
 ### Flags
 
 ### Character Escapes
